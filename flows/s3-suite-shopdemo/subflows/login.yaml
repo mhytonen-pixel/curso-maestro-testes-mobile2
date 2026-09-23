@@ -3,6 +3,11 @@ env:
     EMAIL: ${EMAIL || "cliente@shopdemo.com"}
     SENHA: ${SENHA || "123456"}
 ---
+- extendedWaitUntil:
+    visible:
+        id: "input-email"
+    timeout: 40000
+
 - tapOn: "input-email"
 - inputText: ${EMAIL}
 - tapOn: "input-senha"

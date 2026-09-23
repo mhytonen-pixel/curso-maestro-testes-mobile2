@@ -1,20 +1,6 @@
 appId: com.curso.shopdemo
 ---
-- launchApp:
-    clearState: true
-- tapOn: "E-mail"
-- inputText: "cliente@shopdemo.com"
-- tapOn: "Senha"
-- inputText: "123456"
-- hideKeyboard
-- tapOn: "btn-entrar"
-- extendedWaitUntil:
-    visible: 
-        id: "tela-catalogo"
-    timeout: 40000
-- assertVisible:
-    id: "tela-catalogo"
-
+- runFlow: subflows/login.yaml
 - assertVisible: "Smartphone Pro 128GB"
 - tapOn: "Smartphone Pro 128GB"
 - assertVisible:

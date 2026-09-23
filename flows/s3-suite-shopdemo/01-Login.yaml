@@ -2,6 +2,10 @@ appId: com.curso.shopdemo
 ---
 - launchApp:
     clearState: true
+- extendedWaitUntil:
+    visible:
+        id: "input-email"
+    timeout: 40000
 - tapOn: "E-mail"
 - inputText: "cliente@shopdemo.com"
 - tapOn: "Senha"
